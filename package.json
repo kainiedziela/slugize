@@ -1,0 +1,43 @@
+{
+  "name": "@kainiedziela/slugize",
+  "version": "1.0.0",
+  "description": "Convert sentences, titles and special characters to a url-appropiate slug",
+  "main": "dist",
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kainiedziela/slugize.git"
+  },
+  "keywords": [
+    "string",
+    "slugify",
+    "slug",
+    "url",
+    "url-safe",
+    "urlify",
+    "transliterate",
+    "transliteration",
+    "unicode",
+    "ascii",
+    "text",
+    "filename",
+    "id"
+  ],
+  "author": {
+    "name": "Kai Niedziela",
+    "email": "kai.niedziela@outlook.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kainiedziela/slugize/issues"
+  },
+  "homepage": "https://github.com/kainiedziela/slugize#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
