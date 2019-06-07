@@ -1,31 +1,26 @@
-# sunday
+# slugize
 
-Determine when the next Sunday is and whether it's open to trade in Poland.
+Convert sentences, titles and special characters to a url/filename/id-appropiate and readable slug.
 
 ## Installation
 
 ```bash
-npm install @kainiedziela/sunday --save
+npm install @kainiedziela/slugize --save
 ```
 
 ## Usage
 
-```TS
-import { sunday } from '@kainiedziela/sunday';
+```JS
+import { slugize } from '@kainiedziela/sunday';
 
-const nextSunday: Date = sunday.next(new Date());
-const storesOpened: boolean = sunday.trade(nextSunday);
+const slug = slugize(string);
 ```
 
-`sunday.next(today)` returns the date (in `Date` format) of the next Sunday, unless the passed in date is a Sunday, then it returns the same date. Only accepts dates in a `Date` format.
-
-`sunday.trade(date)` returns a boolean value - **true** if the passed in date is a Sunday and the stores will be/are opened on that Sunday or **false** if they are closed. `trade()` only accepts Sundays in a `Date` format.
-
-If an invalid `Date` object or something that isn't an `instanceof Date` will be passed as an argument to either of those functions an error will be thrown indicating what went wrong.
+`slugize(string)` returns a string that had replaced special characters with latin alternatives, replaced spaces with dashes, removed periods, replaced non-alphanumerical characters with dashes, condensed consecutive dashes, lowercased and with the begging and end trimmed (so that the string doesn't start or end with a dash).
 
 ## Testing
 
-Tests are performed with [Jest](https://jestjs.io/en/) on a built JavaScript file.
+Tests are performed with [Jest](https://jestjs.io/en/).
 
 `npm run test`
 
