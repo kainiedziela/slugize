@@ -1,5 +1,5 @@
 module.exports = function slugize(string) {
-    if (typeof string !== 'string') { throw new Error(`Expected a string, got ${typeof name}.`); }
+    if (typeof string !== 'string') { throw new Error(`Expected a string, got ${typeof string}.`); }
     
     return encodeURIComponent(
       string
