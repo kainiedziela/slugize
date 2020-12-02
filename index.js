@@ -5,7 +5,7 @@ module.exports = function slugize(string) {
       string
       .toLowerCase()
       .normalize('NFD')                 // replace special characters with latin alternatives
-      .replace('ł', 'l')                // replace additional spcial characters missed by normalize()
+      .replace(/ł/g, 'l')                // replace additional spcial characters missed by normalize()
       .replace(/[\u0300-\u036f]/g, '')  // remove
       .replace(/\s/g, '-')              // replace spaces with dashes
       .replace(/\./g, '')               // remove periods
